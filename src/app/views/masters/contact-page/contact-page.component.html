@@ -1,0 +1,106 @@
+<app-header-master></app-header-master>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+  rel="stylesheet"
+/>
+<div class="container">
+  <div class="containerAlt">
+    <div class="containerIzq">
+      <h2 class="h2prim">Contacto</h2>
+      <mat-divider></mat-divider>
+      <mat-card class="textMat">
+        <p class="descipr">
+          Si tienes alguna duda, quieres colaborar con nosotros o celebrar una
+          fiesta en Sala Play, no dudes en ponerte en contacto con nosotros.
+        </p>
+        <div class="iconsTest">
+          <mat-icon>celebration</mat-icon>
+          <mat-icon>party_mode</mat-icon>
+          <mat-icon>celebration</mat-icon>
+          <mat-icon>party_mode</mat-icon>
+          <mat-icon>celebration</mat-icon>
+          <mat-icon>party_mode</mat-icon>
+          <mat-icon>celebration</mat-icon>
+          <mat-icon>party_mode</mat-icon>
+        </div>
+        <p class="descipr">
+          Estamos abiertos a nuevas colaboraciones y dispuestos a hacer de tu
+          evento una experiencia inolvidable.
+        </p>
+        <p class="icons">
+          <mat-icon>mail</mat-icon><b>Email : </b>play8@playPetrer.com
+        </p>
+
+        <p class="icons">
+          <mat-icon>call</mat-icon><b>Telefono : </b>666 666 666
+        </p>
+      </mat-card>
+      <form class="contact-form" [formGroup]="itemForm" (submit)="msg()">
+        <div class="imgForm">
+          <img
+            src="../../../../assets/img/logo_play-1-removebg-preview.png"
+            alt="sala play logo"
+            class="header-logo"
+          />
+          <h2>Duda rapida? Hablamos aqui abajo.</h2>
+        </div>
+        <div class="matFormEx">
+          <mat-form-field
+            style="margin-bottom: 30px"
+            class="full-width" appearance="outline"
+          >
+            <mat-label>Tu Email</mat-label>
+            <input matInput placeholder="play@gmail.com" formControlName="mail" name="text" />
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Comentanos lo que te inquieta...</mat-label>
+            <textarea
+              matInput
+              placeholder="Ejemplo. Me gustaria celebrar mi cumple..."
+              formControlName="text"
+            ></textarea>
+          </mat-form-field>
+
+          <div class="sendFrom">
+            <p><b>Enviar ...</b></p>
+            <button mat-fab color="black" type="submit">
+              <mat-icon>send</mat-icon>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="containerDer">
+      <div>
+        <h2>Dudas? Llamanos</h2>
+        <mat-divider></mat-divider>
+        <mat-card class="finalText">
+          <img
+            style="width: 90%"
+            src="../../../../assets/img/DSC04084.jpg"
+            alt=""
+          />
+          <h2 class="h2min">Abrimos siempre (casi) !!</h2>
+          <p class="descipr">
+            ¡En la sala Play la fiesta nunca termina! Ven a disfrutar de los
+            mejores ritmos de jueves a domingo de <span class="span1"> 17h a 4h. </span> ¡No te pierdas la
+            diversión!
+          </p>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <mat-divider style="width: 90%"></mat-divider>
+  <div class="fotos">
+    <img src="../../../../assets/img/DSC04065.jpg" alt="" />
+    <img src="../../../../assets/img/DSC04053.jpg" alt="" />
+    <img src="../../../../assets/img/DSC04071.jpg" alt="" />
+    <img src="../../../../assets/img/DSC04075.jpg" alt="" />
+  </div>
+  <mat-divider style="width: 90%"></mat-divider>
+</div>
+
+<app-footer-master></app-footer-master>

@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.mat-dialog-container{
+  background-color: #fff9eb !important;
+  box-sizing: border-box;
+}
+
+ /* Establecer altura máxima del contenido del modal */
+::ng-deep .mat-dialog-container {
+  max-height: 80vh; /* Cambia el valor según tu necesidad */
+}
+
+/* Agregar barra de desplazamiento si el contenido excede la altura máxima */
+::ng-deep .mat-dialog-content {
+  overflow-y: auto;
+}
+

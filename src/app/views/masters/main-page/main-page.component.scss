@@ -1,0 +1,211 @@
+hr {
+  border: none;
+  border-bottom: 1px solid blue;
+}
+
+mat-card{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.container{
+  background: rgba(255, 248, 231, 0.8);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text{
+  margin: 50px 0;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 2.5;
+}
+.text h2{
+  font-size: 30px;
+}
+
+.text p{
+  font-size: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.proxEvents{
+  width: 90%;
+  margin-bottom: 100px;
+}
+
+.gestEvents{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+
+}
+
+.miniEvents{
+  height: 500px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  border: 3px solid grey;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 10px;
+}
+
+.imgEvents{
+  margin: 30px;
+}
+
+.miniEvents p{
+  width: 70%;
+  text-align: center;
+}
+
+button{
+  color: black;
+  background-color: white;
+  position: absolute;
+  margin-top: 450px;
+}
+
+.privateParty{
+  width: 90%;
+
+}
+
+.privateParty h2{
+  margin-left: 150px;
+}
+
+mat-divider {
+  width: 100%;
+  background-color: black;
+  height: 1px;
+  margin: 10px 0;
+}
+
+.privatePartyTime{
+  display: flex;
+  width: 100%;
+
+}
+
+.privatePartyTime div{
+  display: flex;
+  width: 50%;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.privatePartyTime p{
+  text-align: center;
+  width: 50%;
+}
+
+.privatePartyTime img{
+  width: 45%;
+}
+
+
+.iconsTest{
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 1300px) {
+
+  .gestEvents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+  .miniEvents{
+    width: 80%;
+  }
+
+
+  .privatePartyTime{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+
+  }
+
+  .partyText{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    margin: 50px;
+  }
+  .privatePartyTime div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .text{
+    margin: 50px 0;
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 2;
+  }
+  .text h2{
+    font-size: 30px;
+  }
+
+  .text p{
+    font-size: 17px;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  .gestEvents img{
+    width: 80%;
+  }
+
+  .gestEvents p{
+    width: 90%;
+  }
+
+  .partyText p{
+    width: 90%;
+  }
+
+  .iconsTest{
+    width: 100%;
+  }
+  .bttEstopa{
+    margin-bottom: 10px;
+  }
+
+}

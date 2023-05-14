@@ -1,0 +1,48 @@
+<mat-toolbar>
+  <span style="display: flex"
+    ><img
+      src="../../../../assets/img/logo_play-1-removebg-preview.png"
+      alt="sala play logo"
+      class="header-logo"
+  /></span>
+  <span class="example-spacer"></span>
+  <div class="comercial">
+    <a routerLink="/"><button mat-button><mat-icon>home</mat-icon>Inicio</button></a>
+    <a routerLink="/contact"><button mat-button><mat-icon>contact_page</mat-icon>Contacto</button></a>
+    <a routerLink="/events"><button mat-button><mat-icon>diversity_3</mat-icon>Eventos</button></a>
+  </div>
+
+
+
+
+  <div class="personal">
+    <button mat-icon-button class="botonAbrir" [matMenuTriggerFor]="menu" (click)="isMenuOpen = !isMenuOpen">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" [class.is-open]="isMenuOpen" (closed)="isMenuOpen = false">
+      <a routerLink="/"><button mat-button><mat-icon>home</mat-icon>Inicio</button></a>
+      <a routerLink="/contact"><button mat-button><mat-icon>contact_page</mat-icon>Contacto</button></a>
+      <a routerLink="/events"><button mat-button><mat-icon>diversity_3</mat-icon>Eventos</button></a>
+      <a routerLink={{route}}><button mat-button ><mat-icon>people</mat-icon>Perfil<span *ngIf="logged" style="margin-left: 5px;" class="fa-layers fa-fw">
+        <i class="fas fa-circle" style="color: greenyellow;" ></i>
+      </span>
+      </button></a>
+    </mat-menu>
+
+    <a class="comercial" routerLink={{route}}><button mat-button ><mat-icon>people</mat-icon>Perfil<span *ngIf="logged" style="margin-left: 5px;" class="fa-layers fa-fw">
+      <i class="fas fa-circle" style="color: greenyellow;" ></i>
+    </span>
+    </button></a>
+
+  </div>
+</mat-toolbar>
+<div class="conImg">
+  <div class="centered">
+    <h1>SALA PLAY</h1>
+    <p style="text-align: center">{{url}}</p>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,35 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+  rel="stylesheet"
+/>
+
+<app-header-master></app-header-master>
+<div class="container">
+  <mat-card>
+    <div class="user">
+      <div class="circle">
+        <i class="fas fa-user" style="font-size: 80px"></i>
+      </div>
+      <p class="info"><b>Nombre de usuario:</b> {{ name }}</p>
+      <p class="info"><b>Correo de usuario:</b> {{ mail }}</p>
+    </div>
+
+    <div class="bttS">
+      <img
+        src="../../../../assets/img/logo_play-1-removebg-preview.png"
+        style="width: 200px"
+        alt=""
+      />
+      <button mat-raised-button (click)="openModalEvents()">
+        Ver entras a eventos
+      </button>
+      <button mat-raised-button (click)="openModalPass()">
+        Cambiar contraseña
+      </button>
+      <button mat-raised-button (click)="cerrarSesion()">Cerrar sesión</button>
+    </div>
+  </mat-card>
+</div>
+<app-footer-master></app-footer-master>

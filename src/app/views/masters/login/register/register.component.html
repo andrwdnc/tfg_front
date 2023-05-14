@@ -1,0 +1,48 @@
+<div class="container">
+  <form [formGroup]="itemForm" (ngSubmit)="submit()">
+    <img src="../../../../assets/img/logo_play-1-removebg-preview.png" alt="">
+    <h2>REGISTRO</h2>
+    <div class="">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Nombre de usuario</mat-label>
+        <input matInput name="user" value="" formControlName="user" />
+      </mat-form-field>
+    </div>
+    <div class="">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput name="mail" value="" formControlName="mail"/>
+      </mat-form-field>
+    </div>
+
+    <div class="">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" name="pass" matInput value="" formControlName="pass" />
+      </mat-form-field>
+    </div>
+    <div class="">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Repetir contraseña</mat-label>
+        <input type="password" name="passR" matInput value="" formControlName="passR" />
+      </mat-form-field>
+    </div>
+
+    <button
+      mat-raised-button
+      class="mat-primary full-width mb-1"
+      style="background-color: black"
+
+    >
+      Registrarse
+    </button>
+    <button
+      mat-raised-button
+      class="mat-primary full-width mb-1"
+      style="background-color: black"
+      routerLink="/login"
+    >
+      Volver
+    </button>
+  </form>
+</div>

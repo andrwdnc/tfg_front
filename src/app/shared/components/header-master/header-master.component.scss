@@ -1,0 +1,122 @@
+mat-toolbar{
+  background: rgba(255, 248, 231, 0.8);
+  color: black;
+}
+
+mat-menu.is-open {
+  display: none;
+}
+
+
+.header-logo{
+  align-items: center;
+  height:90px;
+  margin-top: 8px;
+}
+
+.comercial{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.personal{
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button{
+  display: flex;
+  align-items: baseline;
+}
+
+mat-icon{
+  margin-right: 10px;
+  margin-bottom: 4px;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+.conImg {
+  height: 50vh;
+  background-image: url("../../../../assets/img/DSC04057.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.centered {
+  color: white;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+.centered h1, .centered p {
+  font-size: xx-large;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.centered h1{
+  font-size:  100px;
+  font-weight: bold;
+  font-family: 'Bebas Neue', cursive;
+  padding: 40px;
+}
+
+@media (min-width: 600px) {
+  .botonAbrir {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .comercial{
+    display: none;
+  }
+
+  .personal{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .mat-menu-panel {
+    background-color: #fff9eb;
+  }
+
+  .centered {
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+  }
+
+  .centered h1, .centered p {
+    font-size: large;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .centered h1{
+    font-size:  50px;
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    padding: 40px;
+  }
+
+
+
+}

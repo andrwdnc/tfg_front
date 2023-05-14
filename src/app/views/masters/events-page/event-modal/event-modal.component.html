@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-card-content>
+    <div class="tittleA">
+      <div>
+        <h2>Entradas para el concierto de {{ data.name }}</h2>
+        <h2>El dia {{ data.date }}</h2>
+      </div>
+      <div class="imgPlay">
+        <img
+          src="../../../../../assets/img/logo_play-1-removebg-preview.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="enter">
+      <h3>El precio de la entrada por persona es de {{data.price}} €</h3>
+      <h3 *ngIf="data.tickets > 0">Solo quedan {{data.tickets}} entradas, corre !!</h3>
+      <h3 *ngIf="data.tickets == 0">SOLD OUT</h3>
+      <div *ngIf="data.tickets > 0" [formGroup]="itemForm">
+      <label>Numero de entradas :</label>
+        <mat-form-field class="input-num-ticket full-width" appearance="outline">
+          <input
+            type="number"
+            matInput
+            formControlName="tickets"
+             />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="bttS">
+      <button mat-raised-button color="warn" (click)="closeModal()">
+        <mat-icon>close</mat-icon>
+        Cerrar
+      </button>
+      <button mat-raised-button color="primary" (click)="buyTickes()" [disabled]="itemForm.invalid">
+        <mat-icon>shopping_bag</mat-icon>
+        Comprar
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

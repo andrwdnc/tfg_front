@@ -1,0 +1,31 @@
+<div>
+  <div class="container">
+    <div class="closeModal">
+      <button class="closeButton" mat-button [mat-dialog-close]>
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <mat-divider style="margin: 20px 0"></mat-divider>
+    <h2>Tus entradas</h2>
+    <mat-card *ngFor="let event of events">
+      <mat-card-content>
+        <div class="topBar">
+          <div>
+            <h2>Concierto de "{{ event.evento.name }}"</h2>
+            <h3>El dia {{ event.evento.date }}</h3>
+          </div>
+          <div class="qr">
+            <ngx-qrcode [elementType]="tipoElemento" [value]="valor">
+            </ngx-qrcode>
+          </div>
+        </div>
+
+        <h3>
+          Podran asistir hasta {{ event.evento.tickets }} personas con este
+          codigo.
+        </h3>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

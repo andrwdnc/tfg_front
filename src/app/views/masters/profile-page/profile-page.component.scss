@@ -1,0 +1,86 @@
+.container{
+  background: rgba(255, 248, 231, 0.8);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
+mat-card{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  margin: 120px 0;
+  padding: 100px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+
+.user{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items:center;
+  gap: 20px;
+  width: 50%;
+
+
+}
+
+
+.bttS{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items:center;
+  gap: 20px;
+  width: 50%;
+
+
+}
+
+.info{
+  font-size: 25px;
+}
+
+.user{
+  margin: 0 0 0 100px;
+}
+
+.modal-class{
+  background-color: red !important;
+}
+
+@media (max-width: 1300px) {
+  mat-card{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+  .user{
+    margin:0;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .info{
+    font-size: 17px;
+  }
+}
+

@@ -1,0 +1,46 @@
+<div class="container">
+  <form  [formGroup]="itemForm" (ngSubmit)="submit()">
+    <img src="../../../../assets/img/logo_play-1-removebg-preview.png" alt="">
+    <h2>INICIAR SESION</h2>
+    <div class="">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Usuario</mat-label>
+        <input matInput name="user" value="" formControlName="user"/>
+      </mat-form-field>
+    </div>
+
+    <div class="">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" name="pass" matInput formControlName="pass" />
+      </mat-form-field>
+    </div>
+
+    <button
+      mat-raised-button
+      class="mat-primary full-width mb-1"
+      style="background-color: black"
+     
+    >
+      Inciar Sesion
+    </button>
+    <a routerLink="/register"><button
+      mat-raised-button
+      class="mat-primary full-width mb-1"
+      style="background-color: black"
+    >
+      Registrarse
+    </button></a>
+    <button
+      mat-raised-button
+      class="mat-primary full-width mb-1"
+      style="background-color: black"
+      routerLink="/"
+    >
+      Volver
+    </button>
+
+  </form>
+</div>
+
+
