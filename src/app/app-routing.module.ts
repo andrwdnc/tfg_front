@@ -8,7 +8,9 @@ import { ProfilePageComponent } from './views/masters/profile-page/profile-page.
 import { LoginComponent } from './views/masters/login/login.component';
 import { RegisterComponent } from './views/masters/login/register/register.component';
 import { AuthGuardLogged } from './shared/utils/authLogeed.guard';
-import { AuthGuardUnlogged } from "./shared/utils/authUnlogged.guard"
+import { AuthGuardUnlogged } from "./shared/utils/authUnlogged.guard";
+import { PanelAdminComponent } from './views/masters/profile-page/panel-admin/panel-admin.component';
+import { AuthGuardAdmin } from "./shared/utils/authAdmin.guard";
 
 const routes: Routes = [
   {path: "", component: MainPageComponent},
@@ -16,7 +18,8 @@ const routes: Routes = [
   {path: "events",component: EventsPageComponent},
   {path: "profile",component: ProfilePageComponent, canActivate: [AuthGuardLogged]},
   {path: "login", component: LoginComponent,  canActivate: [AuthGuardUnlogged] },
-  {path: "register", component: RegisterComponent,  canActivate: [AuthGuardUnlogged] }
+  {path: "register", component: RegisterComponent,  canActivate: [AuthGuardUnlogged] },
+  {path: "admin", component: PanelAdminComponent, canActivate:[AuthGuardAdmin]}
 ];
 
 @NgModule({

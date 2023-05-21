@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.btt{
+    margin: 15px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: baseline;
+    margin: 0 5px;
+    flex-direction: row;
+}
+
+mat-icon{
+    margin: 0 10px;
+}

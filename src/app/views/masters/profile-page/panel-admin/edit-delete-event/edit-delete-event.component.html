@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Edicion de eventos</h2>
+    <mat-card *ngFor="let event of myData">
+        <mat-card-content >
+            <div>
+                <h3>{{event.name}}</h3>
+            </div>
+            <div>
+                <button (click)="edit(event)"><mat-icon>edit</mat-icon></button>
+                <button (click)="delete(event._id)"><mat-icon>delete</mat-icon></button>
+            </div>
+            
+        </mat-card-content>
+    </mat-card>
+    <button
+    style="margin-top: 30px;"
+    mat-raised-button
+    class="mat-primary full-width mb-1"
+    style="background-color: black"
+    (click)="cerrar()"
+    type="button"
+  >
+    Volver
+  </button>
+</div>

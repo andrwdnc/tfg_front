@@ -29,6 +29,9 @@ export class ContactPageComponent implements OnInit {
   }
 
   msg(){
+    if(this.itemForm.invalid){
+      return
+    }
     this._snackBar.open("Mensaje enviado correctamente.","", { duration: 3000 });
     this.itemForm.reset();
     this.router.navigate(["/"])

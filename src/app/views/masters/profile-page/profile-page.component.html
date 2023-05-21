@@ -22,8 +22,11 @@
         style="width: 200px"
         alt=""
       />
-      <button mat-raised-button (click)="openModalEvents()">
+      <button *ngIf="type==='User'" mat-raised-button (click)="openModalEvents()">
         Ver entras a eventos
+      </button>
+      <button *ngIf="type==='Admin'" mat-raised-button routerLink="/admin">
+        Panel administrador
       </button>
       <button mat-raised-button (click)="openModalPass()">
         Cambiar contraseña

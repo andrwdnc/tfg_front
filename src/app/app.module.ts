@@ -24,13 +24,16 @@ import { ChangePasswordComponent } from './views/masters/profile-page/change-pas
 import { ViewTicketsComponent } from './views/masters/profile-page/view-tickets/view-tickets.component';
 import { LoginComponent } from './views/masters/login/login.component';
 import { RegisterComponent } from './views/masters/login/register/register.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { CheckoutPageComponent } from './views/masters/events-page/checkout-page/checkout-page.component';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { AuthInterceptor } from './shared/utils/auth.interceptor';
 import { MatMenuModule } from '@angular/material/menu';
-
+import { PanelAdminComponent } from './views/masters/profile-page/panel-admin/panel-admin.component';
+import { CreateEventComponent } from './views/masters/profile-page/panel-admin/create-event/create-event.component';
+import { EditDeleteEventComponent } from './views/masters/profile-page/panel-admin/edit-delete-event/edit-delete-event.component';
+import { ConfirmDeleteComponent } from './views/masters/profile-page/panel-admin/edit-delete-event/confirm-delete/confirm-delete.component'
 
 
 
@@ -54,7 +57,10 @@ import { MatMenuModule } from '@angular/material/menu';
     LoginComponent,
     RegisterComponent,
     CheckoutPageComponent,
-
+    PanelAdminComponent,
+    CreateEventComponent,
+    EditDeleteEventComponent,
+    ConfirmDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -73,9 +79,8 @@ import { MatMenuModule } from '@angular/material/menu';
     ReactiveFormsModule,
     MatSnackBarModule,
     NgxQRCodeModule,
-    MatMenuModule
-
-
+    MatMenuModule,
+    FormsModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]

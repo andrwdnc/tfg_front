@@ -14,6 +14,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProfilePageComponent implements OnInit {
   public name: any;
   public mail: any;
+  public type: any
 
   constructor(
     private router: Router,
@@ -26,6 +27,7 @@ export class ProfilePageComponent implements OnInit {
     const data = JSON.parse(localStorage.getItem('session') ?? '');
     this.name = atob(data.name);
     this.mail = atob(data.mail);
+    this.type = atob(data.type)
   }
 
   cerrarSesion(): void {

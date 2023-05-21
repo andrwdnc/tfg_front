@@ -6,30 +6,65 @@
 />
 <app-header-master></app-header-master>
 
-
 <div class="container">
   <h2 class="fisrttile">NUESTROS PROXIMOS CONCIERTOS</h2>
-  <img class="" src="../../../../assets/img/logo_play-1-removebg-preview.png" alt="" />
-    <mat-card-content class="miniEvents">
-      <h2 class="playCratel">CARTEL MADE IN PLAY</h2>
-      <mat-card class="apiEvents" *ngFor="let event of myData">
-        <div class="tittleimg">
-          <div class="itemsEvents">
-            <h2 class="eventname">{{ event.name }}</h2>
-            <p class="eventdate">Fecha {{ event.date }}</p>
-            <p class="eventprice">Precio:  {{ event.price }} €</p>
-          </div>
-          <img src="{{ event.img }}" alt="" class="imgEvents" />
+  <img
+    class=""
+    src="../../../../assets/img/logo_play-1-removebg-preview.png"
+    alt=""
+  />
+  <mat-card-content class="miniEvents">
+    <h2 class="playCratel">CARTEL MADE IN PLAY</h2>
+    <div class="busqueda">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Busqueda de eventos</mat-label>
+        <input  matInput [(ngModel)]="valorInput" type="text"/>
+      </mat-form-field>
+      <button
+      mat-raised-button
+      type="button"
+      class="mat-primary full-width mb-1"
+      style="background-color: black"
+      (click)="busqueda()"
+    >
+      Buscar
+    </button>
+    </div>
+    
+
+    <mat-card class="apiEvents" *ngFor="let event of myData">
+      <div class="tittleimg">
+        <div class="itemsEvents">
+          <h2 class="eventname">{{ event.name }}</h2>
+          <p class="eventdate">Fecha {{ event.date }}</p>
+          <p class="eventprice">Precio: {{ event.price }} €</p>
         </div>
-        <div class="textEvent">
-          <p>{{ event.description }}</p>
-        </div>
-        <div class="bttS">
-          <button mat-raised-button (click)="openModal(event._id, event.price, event.name, event.date, event.tickets)" >Comprar entradas</button>
-        </div>
-      </mat-card>
-      <h2 class="textRed" style="color: red;">!! UNA VEZ COMPRADAS LAS ENTRADAS NO SE PUEDEN DEVOLVER !!</h2>
-    </mat-card-content>
+        <img src="{{ event.img }}" alt="" class="imgEvents" />
+      </div>
+      <div class="textEvent">
+        <p>{{ event.description }}</p>
+      </div>
+      <div class="bttS">
+        <button [disabled]="type"
+          mat-raised-button
+          (click)="
+            openModal(
+              event._id,
+              event.price,
+              event.name,
+              event.date,
+              event.tickets
+            )
+          "
+        >
+          Comprar entradas
+        </button>
+      </div>
+    </mat-card>
+    <h2 class="textRed" style="color: red">
+      !! UNA VEZ COMPRADAS LAS ENTRADAS NO SE PUEDEN DEVOLVER !!
+    </h2>
+  </mat-card-content>
 </div>
 
 <app-footer-master></app-footer-master>

@@ -1,30 +1,38 @@
 <div class="container">
   <form [formGroup]="itemForm" (ngSubmit)="submit()">
-    <img src="../../../../assets/img/logo_play-1-removebg-preview.png" alt="">
-    <h2>REGISTRO</h2>
+    <h2 ng></h2>
+    <h2>{{title}} de eventos</h2>
     <div class="">
       <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Nombre de usuario</mat-label>
-        <input matInput name="user" value="" formControlName="user" />
-      </mat-form-field>
-    </div>
-    <div class="">
-      <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Email</mat-label>
-        <input matInput name="mail" value="" formControlName="mail" placeholder="play@gmail.com"/>
+        <mat-label>Nombre</mat-label>
+        <input matInput name="name" value="" formControlName="name" />
       </mat-form-field>
     </div>
 
     <div class="">
       <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Contraseña</mat-label>
-        <input type="password" name="pass" matInput value="" formControlName="pass" />
+        <mat-label>Precio de entrada</mat-label>
+        <input name="price" matInput formControlName="price" />
       </mat-form-field>
     </div>
     <div class="">
       <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Repetir contraseña</mat-label>
-        <input type="password" name="passR" matInput value="" formControlName="passR" />
+        <mat-label>Fecha</mat-label>
+        <input matInput name="date" value="" formControlName="date" />
+      </mat-form-field>
+    </div>
+
+    <div class="">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Descripcion</mat-label>
+        <textarea name="description" matInput formControlName="description" ></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Numero de entradas</mat-label>
+        <input matInput name="tickets" formControlName="tickets" />
       </mat-form-field>
     </div>
 
@@ -32,15 +40,15 @@
       mat-raised-button
       class="mat-primary full-width mb-1"
       style="background-color: black"
-
     >
-      Registrarse
+      {{btt}} evento
     </button>
     <button
       mat-raised-button
       class="mat-primary full-width mb-1"
       style="background-color: black"
-      routerLink="/login"
+      (click)="cerrar()"
+      type="button"
     >
       Volver
     </button>

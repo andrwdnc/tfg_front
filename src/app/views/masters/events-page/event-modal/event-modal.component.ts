@@ -61,7 +61,7 @@ export class EventModalComponent {
       data: {userName: userData.name, amount: this.itemForm.value.tickets*this.data.price, newEventData, userData},
       panelClass: 'modal-class',
       width: '720px',
-      height: "80vh",
+      maxHeight: "80vh",
       disableClose: true,
     });
     this.dialogRef.close()
