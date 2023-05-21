@@ -40,7 +40,6 @@ export class CreateEventComponent implements OnInit {
     if(this.data){
       this.title = "Edicion"
       this.btt = "Editar"
-      console.log(this.data)
       this.itemForm = this.fb.group({
         name: [this.data.name, [Validators.required]],
         price: [this.data.price, [Validators.required,  Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
@@ -59,7 +58,6 @@ export class CreateEventComponent implements OnInit {
     const event = this.itemForm.value
     if(this.data){
       this.http.patch('http://localhost:3000/api/v1/eventos/'+this.data._id, event).subscribe((data)=>{
-        console.log(data)
       })
       this.dialogRef1.close(true);
       this.dialogRef2.close(true);
@@ -67,7 +65,6 @@ export class CreateEventComponent implements OnInit {
     } else{
       event.img = "../../../../assets/img/logo_play-1-removebg-preview.png"
       this.http.post('http://localhost:3000/api/v1/eventos/', event).subscribe((data)=>{
-        console.log(data)
       })
       this.dialogRef1.close(true);
       this._snackBar.open('Evento creado con exito.',"", { duration: 3000 });

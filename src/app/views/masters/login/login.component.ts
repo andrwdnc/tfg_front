@@ -55,7 +55,6 @@ export class LoginComponent implements OnInit {
       .post<MyData>('http://localhost:3000/api/v1/usuarios/login', user, { withCredentials: true})
       .subscribe(
         (data: MyData) => {
-          console.log(data)
           localStorage.setItem("token",data.token);
           localStorage.setItem(
             'session',

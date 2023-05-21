@@ -47,7 +47,6 @@ export class ViewTicketsComponent implements OnInit {
                 .get<Event>('http://localhost:3000/api/v1/eventos/' + e.eventId)
                 .subscribe(
                   (res) => {
-                    console.log(e.numTickets)
                     res.evento.tickets = e.numTickets
                     this.events.push(res)
                   },
@@ -57,7 +56,6 @@ export class ViewTicketsComponent implements OnInit {
           }
         },
         (err) => {
-          console.log(err);
         }
       );
   }

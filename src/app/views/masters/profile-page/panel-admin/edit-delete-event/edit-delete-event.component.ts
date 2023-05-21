@@ -24,7 +24,6 @@ export class EditDeleteEventComponent implements OnInit {
     this.http.get("http://localhost:3000/api/v1/eventos/").subscribe((data) => {
       this.myData = data;
       this.myData = this.myData.eventos;
-      console.log(this.myData);
     });
   }
 
@@ -41,7 +40,6 @@ export class EditDeleteEventComponent implements OnInit {
     })
     dialogRef.afterClosed().subscribe((data) => {
       if (data) {
-        console.log(data);
         this.dialogRef.close(true);
       }
     })

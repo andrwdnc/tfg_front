@@ -58,7 +58,6 @@ export class EventsPageComponent implements OnInit {
         .get("http://localhost:3000/api/v1/eventos/busqueda/" + this.valorInput)
         .subscribe((data) => {
           this.myData = data;
-          console.log(this.myData);
           this.myData = this.myData.evento;
         });
     }
