@@ -19,6 +19,7 @@ interface MyData {
     pass: string;
     type: string;
   };
+  token:any
 }
 
 @Component({
@@ -73,6 +74,7 @@ export class RegisterComponent implements OnInit {
       .subscribe(
         (data: MyData) => {
           if (data.resultado != undefined) {
+            localStorage.setItem("token",data.token);
             localStorage.setItem(
               'session',
               JSON.stringify({
